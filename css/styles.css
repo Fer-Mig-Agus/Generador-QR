@@ -1,0 +1,222 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100deg, rgb(255, 131, 0) 15%, rgb(68, 97, 255) 85%);
+}
+
+#title-welcome {
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px;
+}
+
+#go-generator{
+    width: 19%;
+    height: 40px;
+    margin-top: 4%;
+    margin-left: 40%;
+    border-radius: 10px;
+    color: black;
+    background: #c7ff00;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+}
+
+#go-generator:hover {
+    color: #c7ff00;
+    background: black;
+}
+
+#history {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-top: 2%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#history-box {
+    display: flex;
+    min-height: 200px;
+    width: 90%;
+    flex-wrap: nowrap;
+}
+
+#history-box #parrafo-history {
+    width: 60%;
+    text-align: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 1%;
+}
+
+#history-box #parrafo-history a {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+#history-box #parrafo-history a:hover {
+    color: blue;
+}
+
+#history-box #qr-box {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+#qr-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+}
+.formulario #form{
+    width: 80%;
+    height: 100%;
+}
+
+#form #label-url {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#form #url-box {
+    width: 95%;
+    padding: 10px;
+    padding-left: 8px;
+    border-radius: 10px;
+}
+
+#btn-generar {
+    display: block;
+    width: 60%;
+    height: 50px;
+    margin-top: 2%;
+    padding: 10px;
+    font-size: 20px;
+    background: #04b8ff;
+    border-radius: 10px;
+    font-family: 'Itim', cursive;
+    cursor: pointer;
+}
+#btn-generar:hover{
+    font-size: 22px;
+    background: #0297d2;
+}
+
+#mensaje-box{
+    display: block;
+    width: 90%;
+    height: 50px;
+    margin-top: 2%;
+}
+.parrafo-mensaje{
+    font-size: 25px;
+    font-family: 'Itim', cursive;
+    text-align: center;
+}
+.failed{
+    color: red;
+}
+
+
+#qr-generado {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+}
+
+
+#qr-generado #img-box-qr{
+    display: block;
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+#qr-generado #button-box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    margin-top: 3%;
+}
+
+#button-box #btn-Descargar{
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background: #01fc6a;
+    border-radius: 10px;
+    font-family: 'Itim', cursive;
+    cursor: pointer;
+}
+#button-box #btn-Descargar:hover{
+    font-size: 22px;
+    background: #01a746;
+}
+#button-box #btn-EliminarQR{
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background: #ff2c21;
+    border-radius: 10px;
+    font-family: 'Itim', cursive;
+    cursor: pointer;
+}
+#button-box #btn-EliminarQR:hover{
+    font-size: 22px;
+    background: #b60900;
+}
+
+#footer{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin-top: 5%;
+    background: #ed0e0399;
+}
+#footer p{
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    text-align: center;
+    line-height: 100px;
+
+}
+#footer p a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#footer p a:hover{
+    color: white;
+}
+#url-video {
+    display: none;
+}

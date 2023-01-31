@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=no ,initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- link de fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
     <title>Generador QR</title>
 </head>
+
 <body>
-    <h1>
+    <h1 id="title-welcome">
         Bienvenido al Generador QR 3.0
     </h1>
-    <div>
-        <form action="">
-
+    <a href="#form"><button id="go-generator">Ir al Generador</button></a>
+    <h2 id="history">Que es un QR?</h2>
+    <div id="history-box">
+        <p id="parrafo-history">
+            Un código QR (del inglés Quick Response code), es la evolución del código de barras. Es un módulo para
+            almacenar
+            información en una matriz de datos o en un código de barras bidimensional. La matriz se lee en el
+            dispositivo
+            móvil por un lector específico, y de forma inmediata nos lleva a una aplicación en Internet, un mapa de
+            localización, un correo electrónico, una página web o un perfil en una red social. Fue creado en 1994 por la
+            compañía japonesa denso wave, subsidiaria de Toyota. Presenta tres cuadrados en las esquinas que permiten
+            detectar la posición del código al lector. El objetivo de los creadores, un equipo de dos personas dirigido
+            por
+            Masahiro Hara,fue que el código permitiera que su contenido se leyera a alta velocidad. Los códigos QR son
+            muy
+            comunes en Japón, donde son el código bidimensional más popular. Más info <a
+                href="https://es.wikipedia.org/wiki/C%C3%B3digo_QR" target="_blank">aquí</a>
+        </p>
+        <div id="qr-box">
+            <img src="img/imgQR.png" alt="QR" title="image QR">
+        </div>
+    </div>
+    <div class="formulario">
+        <form action="" id="form">
+            <label for="" id="label-url" required>Ingrese la URL o el Texto</label>
+            <input type="text" id="url-box" placeholder="URL...">
+            <button id="btn-generar">Generar QR</button>
+            <div id="mensaje-box">
+                
+            </div>
         </form>
+        <div id="qr-generado">
+            <div id="img-box-qr">
+                <img src="" alt="" id="QR-image">
+            </div>
+            <div id="button-box">
+                <button id="btn-EliminarQR">Eliminar QR</button>
+                <button id="btn-Descargar">Descargar QR</button>
+            </div>
+        </div>
     </div>
 
-    <h1> https://www.youtube.com/watch?v=lbr4gfpufVs&ab_channel=SoftCodEPM </h1>
-
+    <footer id="footer">
+        <p>Desarrollado &copy; por <a href="https://portfolio-miguel-fernandez.netlify.app/">Miguel Fernandez</a></p>
+    </footer>
+    <h1 id="url-video"> https://www.youtube.com/watch?v=lbr4gfpufVs&ab_channel=SoftCodEPM </h1>
+    <script src="js/file.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
