@@ -10,7 +10,7 @@ const mensajeBox = document.querySelector('#mensaje-box');
 const formulario = document.querySelector('#form');
 let preValue;
 
-generateBtn.addEventListener('click', (e) => {   
+generateBtn.addEventListener('click', (e) => {
     e.preventDefault();
     limpiarHTML();
     if (qrInput.value !== "") {
@@ -66,10 +66,10 @@ descarga.addEventListener('click', () => {
     saveAs(imgPath, nombreArchivo);
 
     //Volver el boton a la normalidad
-    setTimeout(()=>{
-        resetearGenerador();
-    },2000);
-    
+
+    resetearGenerador();
+
+
 
 })
 
@@ -79,12 +79,12 @@ function getFileName(str) {
 
 eliminar.addEventListener('click', () => {
     //Volver el boton a la normalidad
-    setTimeout(()=>{
-        resetearGenerador();
-    },2000);
+
+    resetearGenerador();
+
 });
 
-function resetearGenerador(){
+function resetearGenerador() {
     generateBtn.disabled = false;
     generateBtn.style.cursor = "pointer";
     boxQR.style.display = "none";
