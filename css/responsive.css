@@ -1,0 +1,60 @@
+@media (max-width:800px){
+    #history-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #history-box #parrafo-history {
+        width: 100%
+    }
+    #qr-box img {
+        width: 70%;
+        height: auto;
+    }
+    #qr-generado #button-box {
+        width: 75%;
+    }
+    #btn-generar {
+        width: 90%;
+    }
+
+
+}
+
+@media (max-width:598px){
+    #title-welcome {
+        font-size: 40px;
+    }
+    #go-generator {
+        width: 35%;
+        margin-left: 33%;
+    }
+
+    #history-box #parrafo-history {
+        font-size: 17px;
+    }
+    .formulario {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+    }
+    #qr-generado {
+        margin-top: 5%;
+    }
+}
+
+
+@media (max-width:360px){
+    #go-generator {
+        width: 46%;
+        margin-left: 27%;
+    }
+    #btn-generar {
+        width: 85%;
+    }
+    #qr-generado #button-box{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        height: 100px;
+    }
+}
