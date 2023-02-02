@@ -8,10 +8,10 @@ const eliminar = document.querySelector('#btn-EliminarQR');
 const boxQR = document.querySelector('#qr-generado');
 const mensajeBox = document.querySelector('#mensaje-box');
 const formulario = document.querySelector('#form');
-img = document.querySelector("img");
 let preValue;
 
-generateBtn.addEventListener("click", () => {
+generateBtn.addEventListener('click', (e) => {   
+    e.preventDefault();
     limpiarHTML();
     if (qrInput.value !== "") {
         let qrValue = qrInput.value.trim();
@@ -27,13 +27,12 @@ generateBtn.addEventListener("click", () => {
         });
 
     } else {
-        mostrarMensaje("Campo Vacio");
-        return;
+        mostrarMensaje('Campo Vacio');
     }
 
 });
 
-qrInput.addEventListener("keyup", () => {
+qrInput.addEventListener('keyup', () => {
     if (!qrInput.value.trim()) {
         preValue = "";
     }
@@ -60,19 +59,17 @@ function limpiarHTML() {
     }
 
 }
-descarga.addEventListener("click", () => {
+descarga.addEventListener('click', () => {
 
-    let imgPath = img.getAttribute("src");
+    let imgPath = qrImg.getAttribute("src");
     let nombreArchivo = getFileName(imgPath);
     saveAs(imgPath, nombreArchivo);
 
     //Volver el boton a la normalidad
-    generateBtn.disabled = false;
-    generateBtn.style.cursor = "pointer";
-    boxQR.style.display = "none";
-    qrImg.src = "";
-    generateBtn.innerText = "Generar QR";
-    formulario.reset();
+    setTimeout(()=>{
+        resetearGenerador();
+    },2000);
+    
 
 })
 
@@ -82,10 +79,16 @@ function getFileName(str) {
 
 eliminar.addEventListener('click', () => {
     //Volver el boton a la normalidad
+    setTimeout(()=>{
+        resetearGenerador();
+    },2000);
+});
+
+function resetearGenerador(){
     generateBtn.disabled = false;
     generateBtn.style.cursor = "pointer";
     boxQR.style.display = "none";
     qrImg.src = "";
     generateBtn.innerText = "Generar QR";
     formulario.reset();
-});
+}
